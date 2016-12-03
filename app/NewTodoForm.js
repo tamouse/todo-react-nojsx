@@ -13,7 +13,7 @@ module.exports = NewTodoForm = React.createClass({
         return React.createElement(
             "input",
             {
-                type: 'text',
+                autoFocus: true,
                 className: 'todo-form__input',
                 onKeyDown: this.handleKeyDown
             }

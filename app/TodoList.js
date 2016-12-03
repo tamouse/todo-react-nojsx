@@ -7,9 +7,9 @@ module.exports = TodoList = React.createClass({
     getInitialState: function () {
         return {
             todos: [
-                {text: "play bass with Gary Clarke", done: false},
-                {text: "move back to California", done: false},
-                {text: "teach Sass", done: true}
+                { text: "play bass with Gary Clarke",   done: false },
+                { text: "move back to California",      done: false },
+                { text: "teach Sass",                   done: true  }
             ]
         }
     },
@@ -48,30 +48,29 @@ module.exports = TodoList = React.createClass({
         return [left, item, right]
     },
 
+    displayList: function (list, context) {
+        return list.map(
+            function (todo, index) {
+                return React.createElement(Todo,
+                    {
+                        key: index,
+                        todo: todo,
+                        index: index,
+                        toggler: this.toggleTodoItem,
+                        closer: this.deleteTodoItem
+                    }
+                )
+            },
+            context
+        )
+    },
+
     render: function () {
         return React.createElement(
             "div",
-            {
-                className: "todo-list-wrapper"
-            },
-            React.createElement(NewTodoForm, {adder: this.addNewTodo}),
-            React.createElement("ul", {className: 'todo-list'},
-                this.state.todos
-                    .map(
-                        function (todo, index) {
-                            return React.createElement(Todo,
-                                {
-                                    key: index,
-                                    todo: todo,
-                                    index: index,
-                                    toggler: this.toggleTodoItem,
-                                    closer: this.deleteTodoItem
-                                }
-                            )
-                        },
-                        this
-                    )
-            )
+            { className: "todo-list-wrapper" },
+            React.createElement(NewTodoForm, { adder: this.addNewTodo }),
+            React.createElement("ul", { className: 'todo-list' }, this.displayList(this.state.todos, this))
         )
     }
 })
