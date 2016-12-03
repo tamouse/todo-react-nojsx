@@ -14,5 +14,8 @@
     "browser-sync": "^2.18.2",
     "gulp": "^3.9.1",
     "webpack": "^1.13.3"
+  },
+  "scripts": {
+    "watch": "webpack --devtool eval app/TodoApp.js public/js/bundle.js  --watch"
   }
 }

@@ -1,13 +1,33 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 10px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 h1 {
-  border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.todo-form__input {
+    width: 100%;
+}
+
+.todo-form__input:focus {
+    border: 2px solid pink;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-item__button {
+    margin-right: 3em;
+}
+.todo-item--done {
+    color: lightcoral;
+    text-decoration: line-through;
 }

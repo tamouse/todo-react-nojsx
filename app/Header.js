@@ -1,7 +1,7 @@
 const React = require("react")
 
-const Header = React.createClass({
-  render () {
-    return React.createElement("div", null, React.createElement("h1", null, "Todo"))
-  }
+module.exports = Header = React.createClass({
+    render: function () {
+        return React.createElement("div", null, React.createElement("h1", null, "Todo"))
+    }
 })
