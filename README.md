@@ -1,4 +1,4 @@
-# Todo app with React, but no JSX
+# Todo app with React, but no JSX or ES6
 
 In [Brian Holt's](https://twitter.com/holtbt) just finished course
 for [FrontendMasters](https://frontendmasters.com), [Complete
