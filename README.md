@@ -12,8 +12,8 @@ with what Brian was teaching.
 
 I could easily just run through his workshop materials, but I thought
 it would be fun to give the traditional TODO application a go with
-just plain old JavaScript using the React library: no transpilers, no
-webpacking, keeping things in CommonJS form.
+just plain old JavaScript using the React library: no transpilers, 
+minimal webpacking, keeping things as plain as possible.
 
 This should be fun!
 
@@ -22,3 +22,9 @@ This should be fun!
 I'm starting in from scratch, I'm not going to study the other
 implementations, and see what I come up with. It won't be pretty, but
 it will be instructive to me.
+
+---------
+
+And so it's done! Mission Accomplished! The todo app can add new todos,
+toggle a todo done, and remove a todo from the list.
+
