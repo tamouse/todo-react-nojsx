@@ -1,8 +1,6 @@
 const React = require("react")
 const ReactDOM = require("react-dom")
 const Header = require("./Header")
-const NewTodoForm = require("./NewTodoForm")
-const Todo = require("./Todo")
 const TodoList = require("./TodoList")
 
 

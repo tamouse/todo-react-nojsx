@@ -16,17 +16,33 @@ h1 {
     width: 100%;
 }
 
-.todo-form__input:focus {
-    border: 2px solid pink;
-}
-
 .todo-list {
     list-style: none;
 }
 
+.todo-item {
+    padding: 5px 0;
+}
+
 .todo-item__button {
     margin-right: 3em;
+    cursor: pointer;
+    display: inline-block;
+    max-width: 10%;
+    vertical-align: text-top;
+    background-color: lightblue;
+    color: red;
+    border-radius: 50%;
+    border: 1px solid blue;
 }
+
+.todo-item__text {
+    cursor: default;
+    display: inline-block;
+    max-width: 80%;
+    vertical-align: top;
+}
+
 .todo-item--done {
     color: lightcoral;
     text-decoration: line-through;

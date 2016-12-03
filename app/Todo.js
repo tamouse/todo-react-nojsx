@@ -4,13 +4,13 @@ const React = require("react")
 module.exports = Todo = React.createClass({
 
     handleClose: function (event) {
-        let index = event.target.attributes["data-index"].value
+        var index = event.target.attributes["data-index"].value
         index = parseInt(index)
         this.props.closer(index)
     },
 
     handleClick: function (event) {
-        let index = event.target.attributes["data-index"].value
+        var index = event.target.attributes["data-index"].value
         index = parseInt(index)
         this.props.toggler(index)
     },
@@ -31,7 +31,7 @@ module.exports = Todo = React.createClass({
             React.createElement(
                 "span",
                 {
-                    className: this.props.todo.done ? 'todo-item--done' : '',
+                    className: this.props.todo.done ? 'todo-item__text todo-item--done' : 'todo-item__text',
                     "data-index": this.props.index,
                     onClick: this.handleClick
                 },

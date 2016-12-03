@@ -21,7 +21,10 @@ module.exports = TodoList = React.createClass({
     },
 
     toggleTodoItem: function (index) {
-        let [ left, todo, right ] = this.partition(this.state.todos, index)
+        var pieces = this.partition(this.state.todos, index)
+        var left = pieces[0]
+        var todo = pieces[1]
+        var right = pieces[2]
         todo.done = !todo.done
         this.setState({
             todos: [].concat(left, [todo], right)
@@ -29,7 +32,9 @@ module.exports = TodoList = React.createClass({
     },
 
     deleteTodoItem: function (index) {
-        let [ left, _, right ] = this.partition(this.state.todos, index)
+        var pieces = this.partition(this.state.todos, index)
+        var left = pieces[0]
+        var right = pieces[2]
 
         this.setState({
             todos: [].concat(left, right)
@@ -37,9 +42,9 @@ module.exports = TodoList = React.createClass({
     },
 
     partition: function (arr, idx) {
-        let left = arr.slice(0, idx)
-        let item = arr[idx]
-        let right = arr.slice(idx + 1)
+        var left = arr.slice(0, idx)
+        var item = arr[idx]
+        var right = arr.slice(idx + 1)
         return [left, item, right]
     },
 

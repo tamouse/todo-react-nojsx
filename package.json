@@ -16,6 +16,7 @@
     "webpack": "^1.13.3"
   },
   "scripts": {
-    "watch": "webpack --devtool eval app/TodoApp.js public/js/bundle.js  --watch"
+    "watch": "webpack --devtool eval app/TodoApp.js public/js/bundle.js  --watch",
+    "dist": "NODE_ENV=production webpack -p app/TodoApp.js public/js/bundle.js"
   }
 }
